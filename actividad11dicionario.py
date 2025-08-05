@@ -2,16 +2,13 @@ def quick_sort(lista):
     if len(lista) <= 1:
         return lista
 
-    pivote = lista[0]
+    pivote = estudiantes[carnet]
     menores = [x for x in lista[1:] if x < pivote]
     iguales = [x for x in lista if x == pivote]
     mayores = [x for x in lista[1:] if x > pivote]
 
     return quick_sort(menores) + iguales + quick_sort(mayores)
 
-lista=
-resultado = quick_sort(numeros)
-print(resultado)
 
 estudiantes = {}
 cantidad = int(input("¿Cuántos estudiantes desea ingresar? "))
@@ -34,7 +31,9 @@ for i in range(cantidad):
             "telefono": telefono
         }
     }
-
+a=estudiantes['carnet']={}
+resultado = quick_sort(a)
+print(resultado)
 print("\nLista de estudiantes registrados:")
 for carnet, datos in estudiantes.items():
     print(f"\nCarnet: {carnet}")
